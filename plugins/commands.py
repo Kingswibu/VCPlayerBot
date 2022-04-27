@@ -56,10 +56,10 @@ if Config.DATABASE_URI:
 HOME_TEXT = "@skytrixsz"
 admin_filter=filters.create(is_admin) 
 
-@Client.on_message(filters.command(['mstart', f"mstart@{Config.BOT_USERNAME}"]))
+@Client.on_message(filters.command(['start', f"start@{Config.BOT_USERNAME}"]))
 async def start(client, message):
     if len(message.command) > 1:
-        if message.command[1] == 'mhelp':
+        if message.command[1] == 'help':
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -129,10 +129,9 @@ async def start(client, message):
         return
     buttons = [
         [
-            InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/skytrixch'),
+            InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help_main'),
         ],
         [
-            InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help_main'),
             InlineKeyboardButton('🗑 Close', callback_data='close'),
         ]
     ]
