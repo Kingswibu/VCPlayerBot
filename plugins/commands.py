@@ -141,7 +141,7 @@ async def start(client, message):
 
 
 
-@Client.on_message(filters.command(["mhelp", f"mhelp@{Config.BOT_USERNAME}"]))
+@Client.on_message(filters.command(["help", f"help@{Config.BOT_USERNAME}"]))
 async def show_help(client, message):
     reply_markup=InlineKeyboardMarkup(
         [
