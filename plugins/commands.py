@@ -56,7 +56,7 @@ if Config.DATABASE_URI:
 HOME_TEXT = "@skytrixsz"
 admin_filter=filters.create(is_admin) 
 
-@Client.on_message(filters.command(['mstart', f"start@{Config.BOT_USERNAME}"]))
+@Client.on_message(filters.command(['mstart', f"mstart@{Config.BOT_USERNAME}"]))
 async def start(client, message):
     if len(message.command) > 1:
         if message.command[1] == 'mhelp':
@@ -142,7 +142,7 @@ async def start(client, message):
 
 
 
-@Client.on_message(filters.command(["mhelp", f"help@{Config.BOT_USERNAME}"]))
+@Client.on_message(filters.command(["mhelp", f"mhelp@{Config.BOT_USERNAME}"]))
 async def show_help(client, message):
     reply_markup=InlineKeyboardMarkup(
         [
